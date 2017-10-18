@@ -17,7 +17,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "semantic-ui": "^2.2.13"
+    "gulp": "^3.9.1"
   }
 }
