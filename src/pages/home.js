@@ -13,26 +13,10 @@ import {
   Visibility,
 } from 'semantic-ui-react'
 
-const FixedMenu = () => (
-  <Menu fixed='top' size='large'>
-    <Container>
-      <Menu.Item as='a' active>Home</Menu.Item>
-      <Menu.Item as='a'>Work</Menu.Item>
-      <Menu.Item as='a'>Company</Menu.Item>
-      <Menu.Item as='a'>Careers</Menu.Item>
-      <Menu.Menu position='right'>
-        <Menu.Item className='item'>
-          <Button as='a'>Log in</Button>
-        </Menu.Item>
-        <Menu.Item>
-          <Button as='a' primary>Sign Up</Button>
-        </Menu.Item>
-      </Menu.Menu>
-    </Container>
-  </Menu>
-)
+import { AppMenu, AppMenuFixed } from './menu';
 
-export default class Homepage extends Component {
+
+export default class Home extends Component {
   state = {}
 
   hideFixedMenu = () => this.setState({ visible: false })
@@ -43,7 +27,7 @@ export default class Homepage extends Component {
 
     return (
       <div>
-        { visible ? <FixedMenu /> : null }
+        { visible ? <AppMenuFixed /> : null }
 
         <Visibility
           onBottomPassed={this.showFixedMenu}
@@ -56,18 +40,7 @@ export default class Homepage extends Component {
             style={{ minHeight: 700, padding: '1em 0em' }}
             vertical
           >
-            <Container>
-              <Menu inverted pointing secondary size='large'>
-                <Menu.Item as='a' active>Home</Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
-                <Menu.Item position='right'>
-                  <Button as='a' inverted>Log in</Button>
-                  <Button as='a' inverted style={{ marginLeft: '0.5em' }}>Sign Up</Button>
-                </Menu.Item>
-              </Menu>
-            </Container>
+            <AppMenu />
 
             <Container text>
               <Header
