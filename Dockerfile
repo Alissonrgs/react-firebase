@@ -1,9 +1,10 @@
-FROM node:6.11.4-alpine
+FROM node:6.11.4
 EXPOSE 3000
-RUN mkdir src public
-COPY ./public /public
-COPY ./src /src
-COPY ./package.json .
+ENV HOME=/home/app
+RUN mkdir ${HOME} ${HOME}/src ${HOME}/public
+COPY ./public ${HOME}/public
+COPY ./src ${HOME}/src
+COPY ./package.json ${HOME}
+WORKDIR ${HOME}
 RUN npm install
-WORKDIR /src
 CMD [ "npm", "start" ]
