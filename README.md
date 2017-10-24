@@ -1,4 +1,4 @@
-## Webpack Reack Redux
+## Webpack React Redux
 
 A simple project to study react with redux
 
