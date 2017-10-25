@@ -8,7 +8,7 @@ import {
   Image
 } from 'semantic-ui-react'
 
-import logo from '../assets/logo.svg';
+import logo from '../assets/images/logo.svg';
 
 const Dashboard = () => (
   <div>

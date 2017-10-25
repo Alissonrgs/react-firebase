@@ -8,14 +8,14 @@ import {
   Menu
 } from 'semantic-ui-react'
 
-import logo from '../assets/logo.svg';
+import logo from '../assets/images/logo.svg';
 
 
 const AppMenu = () => (
   <Container>
     <Menu inverted pointing secondary size='large'>
       <Menu.Item>
-        <Image src={logo} className="App-logo" alt="logo" size='mini'/>
+        <Image className="logo" src={logo} alt="logo" size='mini'/>
       </Menu.Item>
       <Menu.Item as='a' active>
         <Link to='/'>Home</Link>
@@ -39,7 +39,7 @@ const AppMenuFixed = () => (
   <Menu fixed='top' size='large'>
     <Container>
       <Menu.Item>
-        <Image src={logo} className="App-logo" alt="logo" size='mini'/>
+        <Image className="logo" src={logo} alt="logo" size='mini'/>
       </Menu.Item>
       <Menu.Item as='a' active>
         <Link to='/'>Home</Link>
